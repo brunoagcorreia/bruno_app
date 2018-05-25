@@ -53,7 +53,7 @@ group :development do
 end
 
 group :production do
-  # Type of database run by Heroku server.
+  # PG is PostgresSQL, the type of database run by Heroku server.
   gem 'pg', '~> 0.20'
 end
 
