@@ -1,0 +1,116 @@
+// Place all the styles related to the simple_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//sass parameters for stylings bellow
+$font-stack: Futura, Helvetica, sans-serif;
+$primary-color: #041242;
+$secondary-color: #ffb437;
+$background-color: white;
+
+// body properties
+
+* {
+  margin: 0
+}
+
+html {
+  position: relative;
+  min-height: 100%
+}
+
+body {
+  /* Margin bottom = footer height */
+  margin-bottom: 4em;
+  background: $background-color
+}
+
+.page-contents {
+  //superior padding necessary to avoid overlapping with navbar
+  padding: 3em 3em 2em
+}
+
+h1, h2 {
+  text-align: center
+}
+
+h1 {
+  text-transform: uppercase
+}
+
+a {
+  color: $secondary-color
+}
+
+// navbar
+
+.navbar {
+  background: $primary-color
+}
+
+.navbar-default .navbar-brand a, .navbar-default .navbar-nav>li>a {
+  color: $secondary-color
+}
+
+a:hover, .navbar-default .navbar-brand a:hover, .navbar-default .navbar-nav>li>a:hover {
+//necessary to overlap bootstrap configuration
+  color: $secondary-color;
+  text-decoration: underline overline
+}
+
+.navbar-default .navbar-toggle {
+  background: $secondary-color;
+  border-color: $primary-color;
+  color: $primary-color
+}
+
+.navbar-default .navbar-toggle:hover {
+  background: $primary-color;
+  border-color: $secondary-color;
+  color: $secondary-color
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background: $background-color
+}
+
+// product page
+
+.product {
+  padding: 1em;
+}
+
+// footer
+// bootstrap sticky footer styles configuration applied
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4em;   /* footer height = body margin-bottom */
+  background-color: $primary-color
+}
+
+.container .text-footer {
+  margin: 0.5em 0 0;
+}
+
+.footer > .container {
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+// typography
+h1, h2, h3, p, footer {
+  font-family: Futura, Helvetica, sans-serif;
+}
+
+h1, h2, h3, p {
+  color: $primary-color
+}
+
+footer p {
+  color: $secondary-color
+}
+
