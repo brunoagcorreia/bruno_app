@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 //sass parameters for stylings bellow
-$font-stack: Futura, Helvetica, sans-serif;
-$primary-color: #041242;
+$font-stack: Helvetica, sans-serif;
+$primary-color: black;
 $secondary-color: #ffb437;
 $background-color: white;
 
@@ -16,12 +16,13 @@ $background-color: white;
 
 html {
   position: relative;
-  min-height: 100%
+  min-height: 100%;
+  width: 100%
 }
 
 body {
   /* Margin bottom = footer height */
-  margin-bottom: 4em;
+  margin: 0 0 4em;
   background: $background-color
 }
 
@@ -103,14 +104,14 @@ a:hover, .navbar-default .navbar-brand a:hover, .navbar-default .navbar-nav>li>a
 
 // typography
 h1, h2, h3, p, footer {
-  font-family: Futura, Helvetica, sans-serif;
+  font-family: $font-stack;
 }
 
 h1, h2, h3, p {
   color: $primary-color
 }
 
-footer p {
+footer p, footer >.container a {
+  font-size: 90%;
   color: $secondary-color
 }
-
