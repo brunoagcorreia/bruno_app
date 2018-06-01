@@ -51,3 +51,31 @@ $ * master
 -x-x-x
 
 You'll need to run `bundle install` every time you make changes to your gemfile
+
+
+-x-x-x-
+
+updating / synching databases in git & heroku
+
+git push heroku master
+then
+heroku run rake db:version
+
+-x-x-
+
+Rails has a specific tool for making changes to the database structure called migrations.
+Every time you want to create a new table, delete a table, or modify the structure of an existing table,
+you need to generate a file called a `database migration` using the `rails generate migration` command.
+You can then use the `rails db:migrate` command to run the migration and update the database structure
+(we will repeat this process several times, so you will eventually have it memorized).
+
+
+rails generate migration add_brand_to_intruments brand:string
+-x-x-x
+database migrations
+
+we can use `seeds.rb` file to create products. Inside that file, add:
+
+Product.create(name: "seed-generated product", description: "I also created this product without using the HTML form!")
+
+Save the file. Then, in the terminal, run rails db:seed.

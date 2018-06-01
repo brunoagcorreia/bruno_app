@@ -1,19 +1,14 @@
-$font-stack: Helvetica, sans-serif;
-$primary-color: #041242;
-$secondary-color: #ffb437;
-$background-color: white;
-
 body {
   background-color: #fff;
   color: #333;
   margin: 33px;
-  font-family: $font-stack;
+  font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: $font-stack;
+  font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }

@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<div class="page-contents">
+
+  <h1><%= @product.name %></h1>
+
+  <%= image_tag(@product.image_url, class: "img-responsive") if @product.image_url%>
+
+  <p>
+    <strong>Brand:</strong>
+    <%= @product.brand %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    €<%= @product.price %>
+  </p>
+
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
+</div>
