@@ -1,0 +1,13 @@
+<div class="col-xs-12 col-md-6">
+  <h3><%=link_to product.name, product %></h3>
+  <%= image_tag(product.image_url, class: "img-responsive product_img") if product.image_url %>
+  <p>
+    <strong>Brand: </strong><%= product.brand %>
+  </p>
+  <p>
+    <strong>€<%= product.price %></strong>
+  </p>
+  <%= link_to 'Show', product %>
+  <%= link_to 'Edit', edit_product_path(product) %>
+  <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

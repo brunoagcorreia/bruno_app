@@ -28,14 +28,14 @@ body {
 
 .page-contents {
   //superior padding necessary to avoid overlapping with navbar
-  padding: 3em 3em 2em
+  padding: 3em 1em 2em
 }
 
-h1, h2 {
+h1, h2, h3 {
   text-align: center
 }
 
-h1 {
+h3 {
   text-transform: uppercase
 }
 
@@ -75,12 +75,6 @@ a:hover, .navbar-default .navbar-brand a:hover, .navbar-default .navbar-nav>li>a
   background: $background-color
 }
 
-// product page
-
-.item {
-  padding: 1em;
-}
-
 // footer
 // bootstrap sticky footer styles configuration applied
 
@@ -93,23 +87,23 @@ a:hover, .navbar-default .navbar-brand a:hover, .navbar-default .navbar-nav>li>a
 }
 
 .container .text-footer {
-  margin: 0.5em 0 0;
+  margin: 0.5em 0 0
 }
 
 .footer > .container {
   text-align: center;
   padding-right: 15px;
-  padding-left: 15px;
+  padding-left: 15px
 }
 
 // typography
 h1, h2, h3, p, footer {
-  font-family: $font-stack;
+  font-family: $font-stack
 }
 
-h1, h2, h3, p {
-  color: $primary-color
-}
+// h1, h2, p {
+//   color: $primary-color
+// }
 
 footer p, footer >.container a {
   font-size: 90%;

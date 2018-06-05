@@ -1,11 +1,35 @@
-<div class="page-contents">
-  <h1>Deal of the day</h1>
+<div class="container page-contents">
+  <h1>Welcome to Bruno's Magical Music Shop</h1>
+  <h2>The most amazing music instruments in Berlin</h2>
+  <p>In Europas größtem Musikhaus finden Sie alles zum Thema Musikinstrumente, Studio-, Licht- und Beschallungstechnik. Bei uns gibt's die angesagtesten Marken, preiswerte Alternativen sowie viele kostenlose Extras für Musiker.</p>
 
-  <h2><%= link_to @featured_product_2.name, @featured_product_2 %></h2>
-  <center><%= image_tag(@featured_product_2.image_url, class: "img-responsive product_img") if @featured_product_2.image_url %>
-  </center>
-  <!-- <p><%= @featured_product_2.name %></p>
-  <p><%= @featured_product_3.name %></p> -->
+  <h3>Deals of the day</h3>
 
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <% @products.each do |product| %>
+        <%= render partial: "simple_page", locals: {product: product} %>
+      <% end %>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 
 </div>
