@@ -7,3 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Product.create(name: "Trombone Pbone", brand: "PBone", description: "Plastic Trombone. Lightweight, great sound", image_url:"trombone_02.jpg", price: "199.99")
 Product.create(name: "Kaossilator", brand: "Korg", description: "First generation pocket Synthetizer", image_url:"synth_01.jpg", price: "99.99")
+Order.create(user_id: 1, product_id: 1, total: 10.0)
+Order.create(user_id: 1, product_id: 2, total: 5.0)
+Order.create(user_id: 1, product_id: 3, total: 15.0)
