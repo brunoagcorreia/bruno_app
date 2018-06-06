@@ -6,7 +6,7 @@ $primary-color: black;
 $secondary-color: #ffb437;
 
 .product_img {
-  object-fit: scale-down;
+  object-fit: contain;
   max-height: 300px
 }
 
