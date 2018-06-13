@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BrunoApp</title>
+    <title>Magical Music Store</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -25,11 +25,11 @@
             <span class="icon-bar"></span>
           </button>
           <div class="navbar-brand"><%= link_to "Magical Music Shop", root_path %></div>
-          <!-- removed home from navbar and successfully added rb link to navbar-brand :)  -->
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Products", products_path %></li>
+            <li><%= link_to "Orders", orders_path %></li>
             <li><%= link_to "About", simple_pages_about_path %></li>
             <li><%= link_to "Contact", simple_pages_contact_path %></li>
           </ul>
