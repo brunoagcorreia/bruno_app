@@ -79,6 +79,22 @@ a:hover, .navbar-default .navbar-brand a:hover, .navbar-default .navbar-nav>li>a
   background: $background-color
 }
 
+input {
+  border: 1px;
+  border-color: $secondary-color;
+  // padding: 10px 0px 5px 10px;
+  font-size: 1em;
+  border-radius: 0.5em;
+  margin: 14px;
+}
+
+.btn-search {
+  background-color: $primary-color;
+  color: $background-color;
+  border-style: groove;
+  border-color: $secondary-color;
+}
+
 // footer
 // bootstrap sticky footer styles configuration applied
 
