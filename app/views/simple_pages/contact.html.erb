@@ -1,12 +1,11 @@
-<div class="container page-contents">
-  <h1>Contact</h1>
-  <p>Fell in love with any of the instruments?</p>
-  <p>Get in touch!</p>
+<div class="container">
+  <h2>Contact</h2>
+  <h3>Get in touch!</h3>
 
   <%= flash[:notice] %>
 
   <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
-  <div class="row">
+  <div class="row element_box">
     <div class="form-group">
       <%= form.label :name %>
       <%= form.text_field :name, class: "form-control", placeholder: "Enter Name", required: "true" %>
@@ -19,8 +18,8 @@
       <%= form.label :message %>
       <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", required: "true", rows: 5 %>
     </div>
+    <%= form.submit "Send", class: "form_label" %>
   </div>
-  <%= form.submit "Send", class: "form_label" %>
   <% end %>
 
 </div>

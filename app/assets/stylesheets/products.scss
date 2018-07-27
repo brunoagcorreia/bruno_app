@@ -10,6 +10,27 @@ $secondary-color: #ffb437;
   max-height: 300px
 }
 
+.element_box {
+  border-color: $secondary-color;
+  border-style: solid;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 60%;
+  z-index: 1020;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  font-size: 1em;
+  border-radius: 0.5em;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.form-control {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto
+}
+
 // carousel
 .item img {
   margin-left: auto;
