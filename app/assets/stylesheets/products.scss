@@ -22,11 +22,12 @@ $secondary-color: #ffb437;
   font-size: 1em;
   border-radius: 0.5em;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  padding: 1em
 }
 
 .form-control {
-  max-width: 90%;
+  // max-width: 90%;
   margin-left: auto;
   margin-right: auto
 }
