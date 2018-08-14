@@ -5,11 +5,14 @@
     <h2><%= @product.name %></h2>
 
     <%= image_tag(@product.image_url, class: "img-responsive") if @product.image_url%>
-    
+
     <p><%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Back', products_path %></p>
   </div>
-  <div class="col-sm-6 prod-desc">
+  <div class="col-sm-6">
+    <h3>
+      Product description
+    </h3>
     <p>
       <strong>Brand:</strong>
       <%= @product.brand %>
@@ -24,14 +27,20 @@
       <strong>Price:</strong>
       €<%= @product.price %>
     </p>
+    <p>
+      <strong>Average Rating:</strong> <div class="rated" data-score="<%= @product.average_rating %>"></div>
+    </p>
   </div>
   <div class="col-sm-12">
-    <h4>
-      <strong>Reviews:</strong>
-      <!-- <%= @product.comments.rating_desc.first %> -->
-      <%= @product.highest_rating_comment %>
-    </h4>
+    <h3>
+      What other users have to say
+    </h3>
+    <!-- <%= @product.comments.rating_desc.first %> -->
+    <!-- <%= @product.highest_rating_comment %> -->
+
+    <%= render 'comments' %>
+
+    <%= render 'new_comment' %>
+
   </div>
-
-
 </div>
