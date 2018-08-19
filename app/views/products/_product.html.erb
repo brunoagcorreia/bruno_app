@@ -7,7 +7,12 @@
   <p>
     <strong>€<%= product.price %></strong>
   </p>
-  <%= link_to 'Show', product %>
-  <%= link_to 'Edit', edit_product_path(product) %>
-  <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+  <!-- link to create edit or delete products only available to admin -->
+
+  <% if signed_in? && current_user.admin? %>
+    <!-- <%= link_to 'Show', product %> -->
+    <%= link_to 'Edit', edit_product_path(product) %>
+    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
 </div>

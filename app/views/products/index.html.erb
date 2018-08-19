@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Products</h1>
+<!-- link to create new products only available to admin -->
+<% if signed_in? && current_user.admin? %>
+  <%= link_to 'New product', new_product_path %>
+<% end %>
 
 <div class="container-fluid">
   <div class="row">
@@ -12,5 +16,4 @@
     <%= render @products %>
     <% end %>
   </div>
-  <%= link_to 'New product', new_product_path %>
 </div>
