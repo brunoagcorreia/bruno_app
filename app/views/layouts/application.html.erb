@@ -44,7 +44,7 @@
             <li>
               <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
                 <!-- <%= form.label :q, 'Search for:' %> -->
-                <%= form.text_field :q, id: 'q', value: params[:q], placeholder: " Find an instrument" %>
+                <%= form.text_field :q, id: 'q', value: params[:q], placeholder: "Find an instrument" %>
                 <%= form.submit 'Search', class: 'btn-search' %>
               <% end %>
             </li>
