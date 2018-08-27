@@ -45,6 +45,10 @@ group :development, :test do
  gem 'rspec-rails', '~> 3.7'
  # Controller Testing Framework (Functional Tests)
  gem 'rails-controller-testing'
+ # sets fixtures to be used in tests
+ gem "factory_bot_rails"#, "~> 4.0"
+ # generates random information for tests
+ gem 'faker'
 end
 
 group :development do

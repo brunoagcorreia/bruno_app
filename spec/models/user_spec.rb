@@ -19,5 +19,11 @@ describe User do
         password: "xxx_xx")
       ).to be_valid
     end
+
+    it "is invalid without email" do
+      @user = FactoryBot.build(:random_user, email: nil)
+      expect(@user).not_to be_valid
+    end
+
   end
 end
