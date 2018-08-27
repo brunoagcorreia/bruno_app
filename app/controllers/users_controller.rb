@@ -11,6 +11,10 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    # the show action could look like this
+    #def show
+      #@user = User.find(params[:id])
+    #end
   end
 
   # GET /users/new

@@ -1,5 +1,9 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  #added to limite actions to admin. without it, users can edit the products using the right link
+  before_action only: [:new, :edit, :update, :destroy] do
+    redirect_to products_path, alert: "No soup for you. You not admin" unless current_user && current_user.admin
+  end
 
   # GET /products
   # GET /products.json

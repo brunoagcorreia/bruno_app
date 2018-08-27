@@ -1,9 +1,7 @@
 class Order < ApplicationRecord
   belongs_to :product
   belongs_to :user
-end
 
-# class Order < ActiveRecord::Base
-#     belongs_to :product
-#     belongs_to :user
-# end
+  validates :product, presence: true
+  validates :user, presence: true
+end

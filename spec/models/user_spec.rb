@@ -13,9 +13,9 @@ describe User do
       ).not_to be_valid
     end
 
-    it "is expected to be valid" do
+    it "needs email and password" do
       expect(User.new(
-        email: "test@gmail.com",
+        email: "aa@aa.com",
         password: "xxx_xx")
       ).to be_valid
     end
