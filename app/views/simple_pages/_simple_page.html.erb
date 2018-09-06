@@ -2,6 +2,6 @@
   <%= image_tag(product.image_url, class: "img-responsive product_img", alt: product.name) %>
   <div class="carousel-caption">
     <h3><%=link_to product.name, product %></h3>
-    <h2>Just €<%= product.price %></h2>
+    <h2>Only <%= number_to_currency(product.price.to_f, unit: "€", separator: ",") %></h2>
   </div>
 </div>

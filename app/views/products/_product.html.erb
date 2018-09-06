@@ -5,7 +5,7 @@
     <strong>Brand: </strong><%= product.brand %>
   </p>
   <p>
-    <strong>€<%= product.price %></strong>
+    <strong><%= number_to_currency(product.price.to_f, unit: "€", separator: ",") %></strong>
   </p>
 
   <!-- link to create edit or delete products only available to admin -->
