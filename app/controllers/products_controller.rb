@@ -8,14 +8,12 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    # #pagination of products
-    @products = Product.paginate(:page => params[:page]).per_page(3)
-    #search engine
+    #search engine + pagination of itens
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
     else
-      @products = Product.all
+      @products = Product.paginate(:page => params[:page]).per_page(4)
     end
   end
 

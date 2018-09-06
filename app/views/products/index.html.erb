@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Products</h1>
 <!-- link to create new products only available to admin -->
 <% if signed_in? && current_user.admin? %>
@@ -14,6 +12,7 @@
     </p>
     <% else %>
     <%= render @products %>
+    <%= will_paginate @products %>
     <% end %>
   </div>
 </div>
