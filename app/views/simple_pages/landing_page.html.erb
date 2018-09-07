@@ -1,34 +1,32 @@
-<div class="container">
-  <h1>Welcome to Bruno's Magical Music Shop</h1>
-  <!-- <p>Magical Music Store is a fully working web application. The project was created as an exercise using skills I learned in Career Foundry Web Development Course.</p> -->
 
-  <h3>Deals of the day</h3>
+<h1>Welcome to Bruno's Magical Music Shop</h1>
+<!-- <p>Magical Music Store is a fully working web application. The project was created as an exercise using skills I learned in Career Foundry Web Development Course.</p> -->
+
+<h2>Deals of the day</h2>
 
 
-  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <% @products.each do |product| %>
-      <li data-target="#carousel-example-generic" data-slide-to="<% @products.find_index %>" class="<%= "active" if product == @products.first %>"></li>
-      <% end %>
-    </ol>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <% @products.each do |product| %>
+    <li data-target="#carousel-example-generic" data-slide-to="<% @products.find_index %>" class="<%= "active" if product == @products.first %>"></li>
+    <% end %>
+  </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <% @products.each do |product| %>
-        <%= render partial: "simple_page", locals: {product: product} %>
-      <% end %>
-    </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <% @products.each do |product| %>
+    <%= render partial: "simple_page", locals: {product: product} %>
+    <% end %>
   </div>
 
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>

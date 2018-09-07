@@ -43,7 +43,6 @@
             <% end %>
             <li>
               <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-                <!-- <%= form.label :q, 'Search for:' %> -->
                 <%= form.text_field :q, id: 'q', value: params[:q], placeholder: "Find an instrument" %>
                 <%= form.submit 'Search', class: 'btn-search' %>
               <% end %>
@@ -63,11 +62,6 @@
         <p id="alert" class="alert alert-danger" role="alert"><%= alert %></p>
       <% end %>
     </div>
-
-<!-- Ensure you have flash messages in app/views/layouts/application.html.erb. -->
-  <!-- <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p> -->
-
 
     <!-- whole content of the page enters here -->
     <div class="container">
