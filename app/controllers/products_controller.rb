@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
     #search engine + pagination of itens
     if params[:q]
       search_term = params[:q]
-      @products = Product.search(search_term)
+      @products = Product.search(search_term).paginate(:page => params[:page]).per_page(4)
     else
       @products = Product.paginate(:page => params[:page]).per_page(4)
     end
