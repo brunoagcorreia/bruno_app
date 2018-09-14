@@ -12,8 +12,10 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term).paginate(:page => params[:page]).per_page(4)
+      logger.debug "Product: #{@products}"
     else
       @products = Product.paginate(:page => params[:page]).per_page(4)
+      logger.debug "Product: #{@products}"
     end
   end
 
@@ -68,6 +70,7 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
+    byebug
     @product.destroy
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
