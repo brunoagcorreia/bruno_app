@@ -1,8 +1,8 @@
-<div class="container page-contents row">
+<div class="container row">
   <div class="col-sm-6">
     <h2><%= @product.name %></h2>
 
-    <%= image_tag(@product.image_url, class: "img-responsive") if @product.image_url%>
+    <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.product_image.url") if @product.image_url%>
 
     <% if signed_in? && current_user.admin? %>
       <p><%= link_to 'Edit', edit_product_path(@product) %> |

@@ -14,5 +14,14 @@ $(document).on('turbolinks:load', function(){
       return $(this).attr('data-score');
     }
   });
+  $('.img-zoom').elevateZoom({
+    // zoomType	: "inner",
+    // cursor    : "crosshair"
+    // lensShape : "round",
+    tint      :true,
+    tintColour  :"#ffb437",
+    tintOpacity :0.5
+    // easing    : true
+  });
   $('.alert, .notice, .error').delay(3000).fadeOut()
 });
