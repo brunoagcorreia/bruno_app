@@ -52,6 +52,8 @@ group :development, :test do
  gem "factory_bot_rails"#, "~> 4.0"
  # generates random information for tests
  gem 'faker'
+ # security gem
+ gem 'brakeman'
 end
 
 group :development do
