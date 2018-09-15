@@ -12,10 +12,10 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term).paginate(:page => params[:page]).per_page(4)
-      logger.debug "Product: #{@products}"
+      logger.debug "My search found #{@products.count} products"
     else
       @products = Product.paginate(:page => params[:page]).per_page(4)
-      logger.debug "Product: #{@products}"
+      logger.debug "There is a total of #{@products.count} products"
     end
   end
 
