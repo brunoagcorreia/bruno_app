@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   end
 
   # #for custom error page
-  def error
-    render status_code.to_s, status: (params[:code] || 500)
-  end
+  # def error
+  #   render status_code.to_s, status: (params[:code] || 500)
+  # end
 end
