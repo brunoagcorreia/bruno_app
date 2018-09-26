@@ -29,5 +29,8 @@ module BrunoApp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # #for custom error page
+    config.exceptions_app = self.routes
   end
 end

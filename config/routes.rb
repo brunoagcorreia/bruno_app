@@ -19,6 +19,10 @@ Rails.application.routes.draw do
   post 'simple_pages/thank_you'
   post 'payments/create'
 
+  #for custom error page
+  %w( 404 422 500 ).each do |code|
+    get code, controller: :application, action: :error, code: code
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
