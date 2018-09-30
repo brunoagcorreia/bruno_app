@@ -11,7 +11,9 @@
       Sorry, but we don't have what your are looking for.
     </p>
     <% else %>
-    <%= render @products %>
+    <% cache(cache_key_for_products) do %>
+      <%= render @products %>
+    <% end %>
     <%= will_paginate @products %>
     <% end %>
   </div>
