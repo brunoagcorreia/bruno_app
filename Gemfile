@@ -84,6 +84,9 @@ gem 'will_paginate', '~> 3.1.1'
 # customizable error pages
 gem 'exception_handler', '~> 0.8.0.0'
 
+# working with memcache on heroku server
+gem 'dalli'
+
 # corrects "invalid byte sequence in US-ASCII" when testing with brakeman
 if RUBY_VERSION =~ /2.4/
   Encoding.default_external = Encoding::UTF_8
