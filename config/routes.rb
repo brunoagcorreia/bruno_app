@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   post 'simple_pages/thank_you'
   post 'payments/create'
 
+  mount ActionCable.server => '/cable'
+  
   #for custom error page
   # %w( 404 422 500 ).each do |code|
   #   get code, controller: :application, action: :error, code: code
