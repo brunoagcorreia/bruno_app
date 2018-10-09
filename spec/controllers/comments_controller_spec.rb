@@ -27,11 +27,16 @@ describe CommentsController, type: :controller do
   context "random comment from products" do
     before(:each) do
       @comment = FactoryBot.create(:random_comment,
-        user_id: @admin.id,
+        user_id: @user1.id,
         product_id: @product.id)
     end
     it "can be deleted by admin" do
       sign_in @admin
+      expect{ @comment.destroy }.to change(Comment, :count).by(-1)
+      expect(response).to be_ok
+    end
+    it "can be deleted own user" do
+      sign_in @user1
       expect{ @comment.destroy }.to change(Comment, :count).by(-1)
       expect(response).to be_ok
     end

@@ -20,6 +20,11 @@ describe Product do
       expect(@product.average_rating).to eq 3
     end
 
+    it 'returns the highest_rating_comment rating of all comments' do
+      expect(@product.highest_rating_comment.rating).to eq 5
+      expect(@product.highest_rating_comment.body).to eq 'Kool Thing!'
+    end
+
     it 'is not valid without a name' do
       expect(Product.new(
         description: 'que bueno!')

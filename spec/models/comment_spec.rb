@@ -20,7 +20,7 @@ describe Comment do
 
     it 'is invalid without a rating' do
       expect(Comment.new(
-        body: 'test text',
+        body: Faker::Lebowski.quote,
         user: @user,
         product: @product,
         rating: 4)
