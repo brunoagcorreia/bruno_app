@@ -28,17 +28,17 @@
     <p>
       <strong>Price:</strong>
       <%= number_to_currency(@product.price.to_f, unit: "€", separator: ",") %>
-
-
-    </p>
-    <p>
-      <strong>Average Rating:</strong> <div class="rated" id="average_rating" data-score="<%= @product.average_rating %>"></div>
     </p>
     <!-- link to buy button -->
     <%= form_with(url: '/payments/create') do |form| %>
       <%= render partial: "shared/stripe_checkout_button" %>
       <%= hidden_field_tag(:product_id, @product.id) %>
     <% end %>
+
+    <p>
+      <strong>Average Rating:</strong> <div class="rated" id="average_rating" data-score="<%= @product.average_rating %>"></div>
+    </p>
+
   </div>
   <div class="col-sm-12">
     <h4>
