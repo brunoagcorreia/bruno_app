@@ -90,6 +90,9 @@ gem 'dalli'
 # Advanced Key-Value Store
 gem 'redis-rails'
 
+#security issue found:
+gem 'sprockets', '>= 3.7.2'
+
 # corrects "invalid byte sequence in US-ASCII" when testing with brakeman
 if RUBY_VERSION =~ /2.4/
   Encoding.default_external = Encoding::UTF_8
